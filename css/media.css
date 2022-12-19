@@ -1,0 +1,128 @@
+/* 
+1200px - container = max-width: 970px;
+992px - container = max-width: 750px;
+768px - container = max-width: unset;
+576px - container = max-width: unset;
+475px - container = max-width: unset;
+375px - container = max-width: unset;
+320px - container = max-width: unset;
+*/
+
+@media (max-width:1200px) {
+    .container {
+        max-width: 970px;
+    }
+
+    .navbar__menu {
+        display:flex;
+    }
+
+    .navbar__list {
+        position: absolute;
+        top: -500px;
+        left: -30px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        row-gap: 20px;
+        padding: 20px 35px;
+        background: var(--dark-);
+        border-radius: 0 0 10px 10px;
+        transition: .5s;
+    }
+
+    .navbar__menu:focus~.navbar__list {
+        top: 65px;
+    }
+
+    .navbar__link{
+        color: var(--silver);
+    }
+
+    .navbar__link:hover{
+         text-shadow: 0 0 3px 5px;
+    }
+
+    .navbar__icons {
+        margin-left: 440px;
+    }
+}
+
+@media (max-width:992px) {
+    .container {
+        max-width: 750px;
+    }
+
+    .navbar__icons {
+        margin-left: 222px;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        max-width: unset;
+    }
+
+    .navbar__icons {
+        margin-left: 315px;
+        column-gap: 20px;
+    }
+    
+    
+}
+
+@media (max-width:576px) {
+    .navbar__icons {
+        margin-left: 120px;
+    }
+}
+@media (max-width:475px) {
+
+    .navbar__menu{
+        margin-left: 221px;
+    }
+
+    
+    .navbar__menu:focus~.navbar__icons{
+        top: 65px;
+    }
+
+    .navbar__list{
+        border-radius: 0 0 0 10px;
+    }
+
+    .navbar__icons{
+        position: absolute;
+        top: -500px;
+        left: 50px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        row-gap: 20px;
+        padding: 18px 35px;
+        background: var(--dark-);
+        border-radius: 0 0 10px 0;
+        transition: .5s;
+        border-left: 1px solid white;
+    }
+
+    .navbar__icon{
+        color: var(--silver);
+    }
+    }
+
+    @media (max-width:375px) {
+        .navbar__menu {
+            margin-left: 120px;
+        }
+    }
+     @media (max-width:375px) {
+        .navbar__menu {
+            margin-left: 70px;
+        }
+    }
+
+
+    
+
+
